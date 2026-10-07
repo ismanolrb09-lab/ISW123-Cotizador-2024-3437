@@ -83,5 +83,15 @@ namespace Hotel
 
         }
 
+        private void btnPesos_Click(object sender, EventArgs e)
+        {
+            var reserva = new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = nudTarifa.Value
+            };
+            lstResultados.Items.Add($"Total en RD$: {reserva.Total * nudTasa.Value:N2}");
+        }
     }
 }

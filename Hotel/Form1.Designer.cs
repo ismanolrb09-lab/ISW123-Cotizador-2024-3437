@@ -52,9 +52,20 @@
             label2 = new Label();
             btnNivel1 = new Button();
             lstResultados = new ListBox();
+            nudTasa = new NumericUpDown();
+            nudPersonas = new NumericUpDown();
+            checkBox1 = new CheckBox();
+            label7 = new Label();
+            label8 = new Label();
+            nudTarifa = new NumericUpDown();
+            label9 = new Label();
+            btnPesos = new Button();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbCotizador.SuspendLayout();
             gbTotales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudTasa).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudPersonas).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudTarifa).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -131,7 +142,7 @@
             // 
             // btnCalcular
             // 
-            btnCalcular.Location = new Point(223, 370);
+            btnCalcular.Location = new Point(223, 278);
             btnCalcular.Name = "btnCalcular";
             btnCalcular.Size = new Size(75, 23);
             btnCalcular.TabIndex = 9;
@@ -140,7 +151,7 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(223, 414);
+            btnLimpiar.Location = new Point(223, 332);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(75, 23);
             btnLimpiar.TabIndex = 10;
@@ -176,7 +187,7 @@
             gbTotales.Controls.Add(label4);
             gbTotales.Controls.Add(label3);
             gbTotales.Controls.Add(label2);
-            gbTotales.Location = new Point(14, 323);
+            gbTotales.Location = new Point(12, 261);
             gbTotales.Name = "gbTotales";
             gbTotales.Size = new Size(192, 132);
             gbTotales.TabIndex = 12;
@@ -277,7 +288,7 @@
             // 
             // btnNivel1
             // 
-            btnNivel1.Location = new Point(223, 294);
+            btnNivel1.Location = new Point(325, 282);
             btnNivel1.Name = "btnNivel1";
             btnNivel1.Size = new Size(102, 23);
             btnNivel1.TabIndex = 13;
@@ -289,16 +300,101 @@
             // 
             lstResultados.FormattingEnabled = true;
             lstResultados.ItemHeight = 15;
-            lstResultados.Location = new Point(332, 266);
+            lstResultados.Location = new Point(441, 272);
             lstResultados.Name = "lstResultados";
             lstResultados.Size = new Size(120, 154);
             lstResultados.TabIndex = 14;
+            // 
+            // nudTasa
+            // 
+            nudTasa.DecimalPlaces = 2;
+            nudTasa.Location = new Point(100, 480);
+            nudTasa.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            nudTasa.Name = "nudTasa";
+            nudTasa.Size = new Size(120, 23);
+            nudTasa.TabIndex = 15;
+            nudTasa.Value = new decimal(new int[] { 61, 0, 0, 0 });
+            // 
+            // nudPersonas
+            // 
+            nudPersonas.Location = new Point(100, 523);
+            nudPersonas.Maximum = new decimal(new int[] { 20, 0, 0, 0 });
+            nudPersonas.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            nudPersonas.Name = "nudPersonas";
+            nudPersonas.Size = new Size(120, 23);
+            nudPersonas.TabIndex = 16;
+            nudPersonas.Value = new decimal(new int[] { 3, 0, 0, 0 });
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(100, 562);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(143, 19);
+            checkBox1.TabIndex = 17;
+            checkBox1.Text = "Fin de semana (+15%)";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(12, 482);
+            label7.Name = "label7";
+            label7.Size = new Size(82, 15);
+            label7.TabIndex = 18;
+            label7.Text = "Tasa del dólar:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(12, 523);
+            label8.Name = "label8";
+            label8.Size = new Size(57, 15);
+            label8.TabIndex = 19;
+            label8.Text = "Personas:";
+            // 
+            // nudTarifa
+            // 
+            nudTarifa.DecimalPlaces = 2;
+            nudTarifa.Location = new Point(316, 480);
+            nudTarifa.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            nudTarifa.Name = "nudTarifa";
+            nudTarifa.Size = new Size(120, 23);
+            nudTarifa.TabIndex = 20;
+            nudTarifa.Value = new decimal(new int[] { 130, 0, 0, 0 });
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(259, 482);
+            label9.Name = "label9";
+            label9.Size = new Size(39, 15);
+            label9.TabIndex = 21;
+            label9.Text = "Tarifa:";
+            // 
+            // btnPesos
+            // 
+            btnPesos.Location = new Point(309, 538);
+            btnPesos.Name = "btnPesos";
+            btnPesos.Size = new Size(99, 23);
+            btnPesos.TabIndex = 22;
+            btnPesos.Text = "Total en RD$";
+            btnPesos.UseVisualStyleBackColor = true;
+            btnPesos.Click += btnPesos_Click;
             // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(484, 561);
+            ClientSize = new Size(589, 639);
+            Controls.Add(btnPesos);
+            Controls.Add(label9);
+            Controls.Add(nudTarifa);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(checkBox1);
+            Controls.Add(nudPersonas);
+            Controls.Add(nudTasa);
             Controls.Add(lstResultados);
             Controls.Add(btnNivel1);
             Controls.Add(gbTotales);
@@ -316,7 +412,11 @@
             gbCotizador.PerformLayout();
             gbTotales.ResumeLayout(false);
             gbTotales.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudTasa).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudPersonas).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudTarifa).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -345,5 +445,13 @@
         private Label label2;
         private Button btnNivel1;
         private ListBox lstResultados;
+        private NumericUpDown nudTasa;
+        private NumericUpDown nudPersonas;
+        private CheckBox checkBox1;
+        private Label label7;
+        private Label label8;
+        private NumericUpDown nudTarifa;
+        private Label label9;
+        private Button btnPesos;
     }
 }
