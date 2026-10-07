@@ -133,5 +133,21 @@ namespace Hotel
             };
             lstResultados.Items.Add($"Total: US$ {reserva.Total:N2}");
         }
+
+        private void btnDesglose_Click(object sender, EventArgs e)
+        {
+            var reserva = new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = nudTarifa.Value
+            };
+            lstResultados.Items.Add($"Subtotal: {reserva.Subtotal:N2}");
+            lstResultados.Items.Add($"Descuento: {reserva.Descuento:N2}");
+            lstResultados.Items.Add($"Base imponible: {reserva.BaseImponible:N2}");
+            lstResultados.Items.Add($"ITBIS: {reserva.Itbis:N2}");
+            lstResultados.Items.Add($"Servicio: {reserva.Servicio:N2}");
+            lstResultados.Items.Add($"Total: {reserva.Total:N2}");
+        }
     }
 }

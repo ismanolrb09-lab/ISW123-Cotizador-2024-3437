@@ -63,6 +63,7 @@
             btnPorPersona = new Button();
             btnDeposito = new Button();
             btnFinSemana = new Button();
+            btnDesglose = new Button();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbCotizador.SuspendLayout();
             gbTotales.SuspendLayout();
@@ -305,7 +306,7 @@
             lstResultados.ItemHeight = 15;
             lstResultados.Location = new Point(441, 272);
             lstResultados.Name = "lstResultados";
-            lstResultados.Size = new Size(172, 199);
+            lstResultados.Size = new Size(172, 289);
             lstResultados.TabIndex = 14;
             // 
             // nudTasa
@@ -415,11 +416,22 @@
             btnFinSemana.UseVisualStyleBackColor = true;
             btnFinSemana.Click += btnFinSemana_Click;
             // 
+            // btnDesglose
+            // 
+            btnDesglose.Location = new Point(328, 480);
+            btnDesglose.Name = "btnDesglose";
+            btnDesglose.Size = new Size(98, 23);
+            btnDesglose.TabIndex = 26;
+            btnDesglose.Text = "Desglose";
+            btnDesglose.UseVisualStyleBackColor = true;
+            btnDesglose.Click += btnDesglose_Click;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(625, 639);
+            Controls.Add(btnDesglose);
             Controls.Add(btnFinSemana);
             Controls.Add(btnDeposito);
             Controls.Add(btnPorPersona);
@@ -492,5 +504,6 @@
         private Button btnPorPersona;
         private Button btnDeposito;
         private Button btnFinSemana;
+        private Button btnDesglose;
     }
 }
