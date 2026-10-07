@@ -71,6 +71,8 @@
             label11 = new Label();
             label12 = new Label();
             btnCuentaTotal = new Button();
+            label13 = new Label();
+            btnViejo = new Button();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbCotizador.SuspendLayout();
             gbTotales.SuspendLayout();
@@ -311,9 +313,9 @@
             // 
             lstResultados.FormattingEnabled = true;
             lstResultados.ItemHeight = 15;
-            lstResultados.Location = new Point(592, 286);
+            lstResultados.Location = new Point(592, 332);
             lstResultados.Name = "lstResultados";
-            lstResultados.Size = new Size(172, 349);
+            lstResultados.Size = new Size(172, 304);
             lstResultados.TabIndex = 14;
             // 
             // nudTasa
@@ -503,11 +505,33 @@
             btnCuentaTotal.UseVisualStyleBackColor = true;
             btnCuentaTotal.Click += btnCuentaTotal_Click;
             // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Location = new Point(613, 239);
+            label13.Name = "label13";
+            label13.Size = new Size(119, 15);
+            label13.TabIndex = 34;
+            label13.Text = "EJERCICIOS NIVEL 4 ";
+            // 
+            // btnViejo
+            // 
+            btnViejo.Location = new Point(602, 261);
+            btnViejo.Name = "btnViejo";
+            btnViejo.Size = new Size(139, 23);
+            btnViejo.TabIndex = 35;
+            btnViejo.Text = "Probar sistema viejo";
+            btnViejo.UseVisualStyleBackColor = true;
+            btnViejo.Click += btnViejo_Click;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(886, 639);
+            Controls.Add(btnViejo);
+            Controls.Add(label13);
             Controls.Add(btnCuentaTotal);
             Controls.Add(label12);
             Controls.Add(label11);
@@ -596,5 +620,7 @@
         private Label label11;
         private Label label12;
         private Button btnCuentaTotal;
+        private Label label13;
+        private Button btnViejo;
     }
 }

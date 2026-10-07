@@ -190,12 +190,21 @@ namespace Hotel
                 Noches = (int)nudNoches.Value,
                 TarifaPorNoche = nudTarifa.Value
             };
-            var traslado = new TrasladoAeropuerto { Pasajeros = 3, Nocturno = true};
+            var traslado = new TrasladoAeropuerto { Pasajeros = 3, Nocturno = true };
             var excursion = new Excursion { Personas = 5, PrecioPorPersona = 80m };
             var minibar = new ConsumoMinibar { Cantidad = 9, PrecioUnitario = 3.50m };
 
             decimal cuentaTotal = reserva.Total + traslado.Total + excursion.Total + minibar.Total;
             lstResultados.Items.Add($"Cuenta total: US$ {cuentaTotal:N2}");
+        }
+
+        private void btnViejo_Click(object sender, EventArgs e)
+        {
+            lstResultados.Items.Add($"Depósito de 1000: {SistemaViejo.CalcularDeposito(1000m):N2} (debe dar 300.00)");
+            lstResultados.Items.Add($"100 USD a tasa 60: {SistemaViejo.APesos(100m, 60m):N2} (debe dar 6,000.00)");
+            lstResultados.Items.Add($"Tarifa 200 fin de semana: {SistemaViejo.TarifaFinDeSemana(200m, true):N2} (debe dar 230.00)");
+            lstResultados.Items.Add($"Excursión 4 × 50: {SistemaViejo.TotalExcursion(4, 50m):N2} (debe dar 180.00)");
+            lstResultados.Items.Add($"Minibar 3 × 4: {SistemaViejo.TotalMinibar(3, 4m):N2} (debe dar 14.16)");
         }
     }
 }
