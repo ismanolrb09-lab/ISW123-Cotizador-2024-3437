@@ -93,5 +93,16 @@ namespace Hotel
             };
             lstResultados.Items.Add($"Total en RD$: {reserva.Total * nudTasa.Value:N2}");
         }
+
+        private void btnPorPersona_Click(object sender, EventArgs e)
+        {
+            var reserva = new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = nudTarifa.Value
+            };
+            lstResultados.Items.Add($"Por Persona: US$ {reserva.Total / nudPersonas.Value:N2}");
+        }
     }
 }

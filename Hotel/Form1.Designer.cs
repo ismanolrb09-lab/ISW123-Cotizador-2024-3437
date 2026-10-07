@@ -60,6 +60,7 @@
             nudTarifa = new NumericUpDown();
             label9 = new Label();
             btnPesos = new Button();
+            btnPorPersona = new Button();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbCotizador.SuspendLayout();
             gbTotales.SuspendLayout();
@@ -111,7 +112,7 @@
             nudNoches.Name = "nudNoches";
             nudNoches.Size = new Size(137, 23);
             nudNoches.TabIndex = 5;
-            nudNoches.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudNoches.Value = new decimal(new int[] { 10, 0, 0, 0 });
             // 
             // lblTarifa
             // 
@@ -142,7 +143,7 @@
             // 
             // btnCalcular
             // 
-            btnCalcular.Location = new Point(223, 278);
+            btnCalcular.Location = new Point(100, 399);
             btnCalcular.Name = "btnCalcular";
             btnCalcular.Size = new Size(75, 23);
             btnCalcular.TabIndex = 9;
@@ -151,7 +152,7 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(223, 332);
+            btnLimpiar.Location = new Point(12, 399);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(75, 23);
             btnLimpiar.TabIndex = 10;
@@ -302,7 +303,7 @@
             lstResultados.ItemHeight = 15;
             lstResultados.Location = new Point(441, 272);
             lstResultados.Name = "lstResultados";
-            lstResultados.Size = new Size(120, 154);
+            lstResultados.Size = new Size(143, 199);
             lstResultados.TabIndex = 14;
             // 
             // nudTasa
@@ -374,7 +375,7 @@
             // 
             // btnPesos
             // 
-            btnPesos.Location = new Point(309, 538);
+            btnPesos.Location = new Point(328, 324);
             btnPesos.Name = "btnPesos";
             btnPesos.Size = new Size(99, 23);
             btnPesos.TabIndex = 22;
@@ -382,11 +383,22 @@
             btnPesos.UseVisualStyleBackColor = true;
             btnPesos.Click += btnPesos_Click;
             // 
+            // btnPorPersona
+            // 
+            btnPorPersona.Location = new Point(328, 366);
+            btnPorPersona.Name = "btnPorPersona";
+            btnPorPersona.Size = new Size(99, 23);
+            btnPorPersona.TabIndex = 23;
+            btnPorPersona.Text = "Por Persona";
+            btnPorPersona.UseVisualStyleBackColor = true;
+            btnPorPersona.Click += btnPorPersona_Click;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(589, 639);
+            Controls.Add(btnPorPersona);
             Controls.Add(btnPesos);
             Controls.Add(label9);
             Controls.Add(nudTarifa);
@@ -453,5 +465,6 @@
         private NumericUpDown nudTarifa;
         private Label label9;
         private Button btnPesos;
+        private Button btnPorPersona;
     }
 }
