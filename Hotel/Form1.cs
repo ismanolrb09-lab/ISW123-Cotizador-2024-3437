@@ -60,11 +60,15 @@ namespace Hotel
 
             lstResultados.Items.Add($"1.6: {larga}");
 
+            // 1.7
+            string s = "Villa" + "Coral";
+            lstResultados.Items.Add($"1.7: {s}");
 
-
-
-
-
+            // 1.8
+            int n18 = 4;
+            decimal t18 = 100m;
+            decimal total = n18 * t18 * 1.28m;
+            lstResultados.Items.Add($"1.8: {total}");
 
 
         }
