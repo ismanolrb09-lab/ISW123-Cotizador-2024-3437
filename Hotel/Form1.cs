@@ -38,6 +38,12 @@ namespace Hotel
             x = x * 3;
 
             lstResultados.Items.Add($"1.3: {x}");
+
+            // 1.4
+            decimal p = 200m;
+            decimal r14 = p * 0.18m;
+
+            lstResultados.Items.Add($"1.4: {r14}");
         }
 
 
