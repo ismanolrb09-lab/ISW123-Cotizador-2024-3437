@@ -64,6 +64,7 @@
             btnDeposito = new Button();
             btnFinSemana = new Button();
             btnDesglose = new Button();
+            btnTraslado = new Button();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbCotizador.SuspendLayout();
             gbTotales.SuspendLayout();
@@ -426,11 +427,22 @@
             btnDesglose.UseVisualStyleBackColor = true;
             btnDesglose.Click += btnDesglose_Click;
             // 
+            // btnTraslado
+            // 
+            btnTraslado.Location = new Point(328, 521);
+            btnTraslado.Name = "btnTraslado";
+            btnTraslado.Size = new Size(98, 23);
+            btnTraslado.TabIndex = 27;
+            btnTraslado.Text = "Traslado";
+            btnTraslado.UseVisualStyleBackColor = true;
+            btnTraslado.Click += btnTraslado_Click;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(625, 639);
+            Controls.Add(btnTraslado);
             Controls.Add(btnDesglose);
             Controls.Add(btnFinSemana);
             Controls.Add(btnDeposito);
@@ -505,5 +517,6 @@
         private Button btnDeposito;
         private Button btnFinSemana;
         private Button btnDesglose;
+        private Button btnTraslado;
     }
 }

@@ -149,5 +149,15 @@ namespace Hotel
             lstResultados.Items.Add($"Servicio: {reserva.Servicio:N2}");
             lstResultados.Items.Add($"Total: {reserva.Total:N2}");
         }
+
+        private void btnTraslado_Click(object sender, EventArgs e)
+        {
+            var traslado = new TrasladoAeropuerto
+            {
+                Pasajeros = 3,
+                Nocturno = true
+            };
+            lstResultados.Items.Add($"Traslado: US$ {traslado.Total:N2}");
+        }
     }
 }
