@@ -181,5 +181,21 @@ namespace Hotel
             };
             lstResultados.Items.Add($"Minibar: US$ {minibar.Total:N2}");
         }
+
+        private void btnCuentaTotal_Click(object sender, EventArgs e)
+        {
+            var reserva = new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = nudTarifa.Value
+            };
+            var traslado = new TrasladoAeropuerto { Pasajeros = 3, Nocturno = true};
+            var excursion = new Excursion { Personas = 5, PrecioPorPersona = 80m };
+            var minibar = new ConsumoMinibar { Cantidad = 9, PrecioUnitario = 3.50m };
+
+            decimal cuentaTotal = reserva.Total + traslado.Total + excursion.Total + minibar.Total;
+            lstResultados.Items.Add($"Cuenta total: US$ {cuentaTotal:N2}");
+        }
     }
 }

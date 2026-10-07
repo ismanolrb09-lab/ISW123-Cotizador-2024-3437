@@ -70,6 +70,7 @@
             label10 = new Label();
             label11 = new Label();
             label12 = new Label();
+            btnCuentaTotal = new Button();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbCotizador.SuspendLayout();
             gbTotales.SuspendLayout();
@@ -492,11 +493,22 @@
             label12.TabIndex = 32;
             label12.Text = "EJERCICIOS NIVEL 3";
             // 
+            // btnCuentaTotal
+            // 
+            btnCuentaTotal.Location = new Point(616, 206);
+            btnCuentaTotal.Name = "btnCuentaTotal";
+            btnCuentaTotal.Size = new Size(99, 23);
+            btnCuentaTotal.TabIndex = 33;
+            btnCuentaTotal.Text = "Cuenta total";
+            btnCuentaTotal.UseVisualStyleBackColor = true;
+            btnCuentaTotal.Click += btnCuentaTotal_Click;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(886, 639);
+            Controls.Add(btnCuentaTotal);
             Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(label10);
@@ -583,5 +595,6 @@
         private Label label10;
         private Label label11;
         private Label label12;
+        private Button btnCuentaTotal;
     }
 }
