@@ -44,6 +44,15 @@ namespace Hotel
             decimal r14 = p * 0.18m;
 
             lstResultados.Items.Add($"1.4: {r14}");
+
+            // 1.5
+            int n15 = 7;
+            decimal d = 0m;
+            if (n15 > 7)
+            {
+                d = 50m;
+            }
+            lstResultados.Items.Add($"1.5: {d}");
         }
 
 
