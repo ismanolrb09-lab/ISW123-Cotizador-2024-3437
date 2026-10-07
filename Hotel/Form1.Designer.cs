@@ -54,7 +54,7 @@
             lstResultados = new ListBox();
             nudTasa = new NumericUpDown();
             nudPersonas = new NumericUpDown();
-            checkBox1 = new CheckBox();
+            chkFinSemana = new CheckBox();
             label7 = new Label();
             label8 = new Label();
             nudTarifa = new NumericUpDown();
@@ -62,6 +62,7 @@
             btnPesos = new Button();
             btnPorPersona = new Button();
             btnDeposito = new Button();
+            btnFinSemana = new Button();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbCotizador.SuspendLayout();
             gbTotales.SuspendLayout();
@@ -327,15 +328,15 @@
             nudPersonas.TabIndex = 16;
             nudPersonas.Value = new decimal(new int[] { 3, 0, 0, 0 });
             // 
-            // checkBox1
+            // chkFinSemana
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(100, 562);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(143, 19);
-            checkBox1.TabIndex = 17;
-            checkBox1.Text = "Fin de semana (+15%)";
-            checkBox1.UseVisualStyleBackColor = true;
+            chkFinSemana.AutoSize = true;
+            chkFinSemana.Location = new Point(93, 608);
+            chkFinSemana.Name = "chkFinSemana";
+            chkFinSemana.Size = new Size(143, 19);
+            chkFinSemana.TabIndex = 17;
+            chkFinSemana.Text = "Fin de semana (+15%)";
+            chkFinSemana.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -349,7 +350,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(12, 523);
+            label8.Location = new Point(17, 531);
             label8.Name = "label8";
             label8.Size = new Size(57, 15);
             label8.TabIndex = 19;
@@ -358,7 +359,7 @@
             // nudTarifa
             // 
             nudTarifa.DecimalPlaces = 2;
-            nudTarifa.Location = new Point(316, 480);
+            nudTarifa.Location = new Point(100, 566);
             nudTarifa.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             nudTarifa.Name = "nudTarifa";
             nudTarifa.Size = new Size(120, 23);
@@ -368,7 +369,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(259, 482);
+            label9.Location = new Point(26, 574);
             label9.Name = "label9";
             label9.Size = new Size(39, 15);
             label9.TabIndex = 21;
@@ -404,11 +405,22 @@
             btnDeposito.UseVisualStyleBackColor = true;
             btnDeposito.Click += btnDeposito_Click;
             // 
+            // btnFinSemana
+            // 
+            btnFinSemana.Location = new Point(328, 439);
+            btnFinSemana.Name = "btnFinSemana";
+            btnFinSemana.Size = new Size(98, 23);
+            btnFinSemana.TabIndex = 25;
+            btnFinSemana.Text = "Fin de Semana";
+            btnFinSemana.UseVisualStyleBackColor = true;
+            btnFinSemana.Click += btnFinSemana_Click;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(625, 639);
+            Controls.Add(btnFinSemana);
             Controls.Add(btnDeposito);
             Controls.Add(btnPorPersona);
             Controls.Add(btnPesos);
@@ -416,7 +428,7 @@
             Controls.Add(nudTarifa);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(checkBox1);
+            Controls.Add(chkFinSemana);
             Controls.Add(nudPersonas);
             Controls.Add(nudTasa);
             Controls.Add(lstResultados);
@@ -471,7 +483,7 @@
         private ListBox lstResultados;
         private NumericUpDown nudTasa;
         private NumericUpDown nudPersonas;
-        private CheckBox checkBox1;
+        private CheckBox chkFinSemana;
         private Label label7;
         private Label label8;
         private NumericUpDown nudTarifa;
@@ -479,5 +491,6 @@
         private Button btnPesos;
         private Button btnPorPersona;
         private Button btnDeposito;
+        private Button btnFinSemana;
     }
 }

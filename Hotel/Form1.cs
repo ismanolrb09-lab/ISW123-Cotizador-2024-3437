@@ -117,5 +117,21 @@ namespace Hotel
             lstResultados.Items.Add($"Depósito: US$ {deposito:N2}");
             lstResultados.Items.Add($"Saldo pendiente: US$ {reserva.Total - deposito:N2}");
         }
+
+        private void btnFinSemana_Click(object sender, EventArgs e)
+        {
+            decimal tarifa = nudTarifa.Value;
+            if (chkFinSemana.Checked)
+            {
+                tarifa = tarifa * 1.15m;
+            }
+            var reserva = new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = tarifa
+            };
+            lstResultados.Items.Add($"Total: US$ {reserva.Total:N2}");
+        }
     }
 }
