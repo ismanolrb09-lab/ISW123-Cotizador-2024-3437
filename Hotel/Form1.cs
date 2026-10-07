@@ -75,11 +75,13 @@ namespace Hotel
             t19 = t19 + t19 * 0.25m;
 
             lstResultados.Items.Add($"1.9: {t19}");
+
+            // 1.10
+            int noches = (int)8.9m;
+
+            lstResultados.Items.Add($"1.10: {noches}");
+
         }
-
-
-
-
 
     }
 }
