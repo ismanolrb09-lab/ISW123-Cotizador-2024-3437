@@ -66,6 +66,10 @@
             btnDesglose = new Button();
             btnTraslado = new Button();
             btnExcursion = new Button();
+            btnMinibar = new Button();
+            label10 = new Label();
+            label11 = new Label();
+            label12 = new Label();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbCotizador.SuspendLayout();
             gbTotales.SuspendLayout();
@@ -141,9 +145,9 @@
             ckTemporada.AutoSize = true;
             ckTemporada.Location = new Point(31, 161);
             ckTemporada.Name = "ckTemporada";
-            ckTemporada.Size = new Size(145, 19);
+            ckTemporada.Size = new Size(149, 19);
             ckTemporada.TabIndex = 8;
-            ckTemporada.Text = "Temoirada alta (+25%)";
+            ckTemporada.Text = "Temporada alta (+25%)";
             ckTemporada.UseVisualStyleBackColor = true;
             // 
             // btnCalcular
@@ -294,7 +298,7 @@
             // 
             // btnNivel1
             // 
-            btnNivel1.Location = new Point(328, 282);
+            btnNivel1.Location = new Point(616, 36);
             btnNivel1.Name = "btnNivel1";
             btnNivel1.Size = new Size(99, 23);
             btnNivel1.TabIndex = 13;
@@ -306,7 +310,7 @@
             // 
             lstResultados.FormattingEnabled = true;
             lstResultados.ItemHeight = 15;
-            lstResultados.Location = new Point(441, 272);
+            lstResultados.Location = new Point(592, 286);
             lstResultados.Name = "lstResultados";
             lstResultados.Size = new Size(172, 349);
             lstResultados.TabIndex = 14;
@@ -380,7 +384,7 @@
             // 
             // btnPesos
             // 
-            btnPesos.Location = new Point(328, 324);
+            btnPesos.Location = new Point(488, 95);
             btnPesos.Name = "btnPesos";
             btnPesos.Size = new Size(99, 23);
             btnPesos.TabIndex = 22;
@@ -390,7 +394,7 @@
             // 
             // btnPorPersona
             // 
-            btnPorPersona.Location = new Point(328, 366);
+            btnPorPersona.Location = new Point(616, 95);
             btnPorPersona.Name = "btnPorPersona";
             btnPorPersona.Size = new Size(99, 23);
             btnPorPersona.TabIndex = 23;
@@ -400,7 +404,7 @@
             // 
             // btnDeposito
             // 
-            btnDeposito.Location = new Point(328, 400);
+            btnDeposito.Location = new Point(738, 95);
             btnDeposito.Name = "btnDeposito";
             btnDeposito.Size = new Size(99, 23);
             btnDeposito.TabIndex = 24;
@@ -410,7 +414,7 @@
             // 
             // btnFinSemana
             // 
-            btnFinSemana.Location = new Point(328, 439);
+            btnFinSemana.Location = new Point(488, 124);
             btnFinSemana.Name = "btnFinSemana";
             btnFinSemana.Size = new Size(98, 23);
             btnFinSemana.TabIndex = 25;
@@ -420,7 +424,7 @@
             // 
             // btnDesglose
             // 
-            btnDesglose.Location = new Point(328, 480);
+            btnDesglose.Location = new Point(739, 124);
             btnDesglose.Name = "btnDesglose";
             btnDesglose.Size = new Size(98, 23);
             btnDesglose.TabIndex = 26;
@@ -430,7 +434,7 @@
             // 
             // btnTraslado
             // 
-            btnTraslado.Location = new Point(328, 521);
+            btnTraslado.Location = new Point(489, 177);
             btnTraslado.Name = "btnTraslado";
             btnTraslado.Size = new Size(98, 23);
             btnTraslado.TabIndex = 27;
@@ -440,7 +444,7 @@
             // 
             // btnExcursion
             // 
-            btnExcursion.Location = new Point(328, 564);
+            btnExcursion.Location = new Point(616, 177);
             btnExcursion.Name = "btnExcursion";
             btnExcursion.Size = new Size(99, 23);
             btnExcursion.TabIndex = 28;
@@ -448,11 +452,55 @@
             btnExcursion.UseVisualStyleBackColor = true;
             btnExcursion.Click += btnExcursion_Click;
             // 
+            // btnMinibar
+            // 
+            btnMinibar.Location = new Point(739, 177);
+            btnMinibar.Name = "btnMinibar";
+            btnMinibar.Size = new Size(98, 23);
+            btnMinibar.TabIndex = 29;
+            btnMinibar.Text = "Minibar";
+            btnMinibar.UseVisualStyleBackColor = true;
+            btnMinibar.Click += btnMinibar_Click;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.Location = new Point(568, 9);
+            label10.Name = "label10";
+            label10.Size = new Size(196, 15);
+            label10.TabIndex = 30;
+            label10.Text = "PRIMEROS 10 EJERCICIOS NIVEL 1";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.Location = new Point(616, 77);
+            label11.Name = "label11";
+            label11.Size = new Size(116, 15);
+            label11.TabIndex = 31;
+            label11.Text = "EJERCICIOS NIVEL 2";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Location = new Point(616, 145);
+            label12.Name = "label12";
+            label12.Size = new Size(116, 15);
+            label12.TabIndex = 32;
+            label12.Text = "EJERCICIOS NIVEL 3";
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(625, 639);
+            ClientSize = new Size(886, 639);
+            Controls.Add(label12);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(btnMinibar);
             Controls.Add(btnExcursion);
             Controls.Add(btnTraslado);
             Controls.Add(btnDesglose);
@@ -531,5 +579,9 @@
         private Button btnDesglose;
         private Button btnTraslado;
         private Button btnExcursion;
+        private Button btnMinibar;
+        private Label label10;
+        private Label label11;
+        private Label label12;
     }
 }

@@ -149,7 +149,7 @@ namespace Hotel
             lstResultados.Items.Add($"Servicio: {reserva.Servicio:N2}");
             lstResultados.Items.Add($"Total: {reserva.Total:N2}");
         }
-
+        //3.1 
         private void btnTraslado_Click(object sender, EventArgs e)
         {
             var traslado = new TrasladoAeropuerto
@@ -159,7 +159,7 @@ namespace Hotel
             };
             lstResultados.Items.Add($"Traslado: US$ {traslado.Total:N2}");
         }
-
+        //3.2
         private void btnExcursion_Click(object sender, EventArgs e)
         {
             var excursion = new Excursion
@@ -170,6 +170,16 @@ namespace Hotel
             };
             lstResultados.Items.Add($"Excursión: US$ {excursion.Total:N2}");
 
+        }
+        //3.3
+        private void btnMinibar_Click(object sender, EventArgs e)
+        {
+            var minibar = new ConsumoMinibar
+            {
+                Cantidad = 9,
+                PrecioUnitario = 3.50m
+            };
+            lstResultados.Items.Add($"Minibar: US$ {minibar.Total:N2}");
         }
     }
 }
