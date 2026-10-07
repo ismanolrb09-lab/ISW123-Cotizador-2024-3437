@@ -65,6 +65,7 @@
             btnFinSemana = new Button();
             btnDesglose = new Button();
             btnTraslado = new Button();
+            btnExcursion = new Button();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbCotizador.SuspendLayout();
             gbTotales.SuspendLayout();
@@ -307,7 +308,7 @@
             lstResultados.ItemHeight = 15;
             lstResultados.Location = new Point(441, 272);
             lstResultados.Name = "lstResultados";
-            lstResultados.Size = new Size(172, 289);
+            lstResultados.Size = new Size(172, 349);
             lstResultados.TabIndex = 14;
             // 
             // nudTasa
@@ -437,11 +438,22 @@
             btnTraslado.UseVisualStyleBackColor = true;
             btnTraslado.Click += btnTraslado_Click;
             // 
+            // btnExcursion
+            // 
+            btnExcursion.Location = new Point(328, 564);
+            btnExcursion.Name = "btnExcursion";
+            btnExcursion.Size = new Size(99, 23);
+            btnExcursion.TabIndex = 28;
+            btnExcursion.Text = "Excursion";
+            btnExcursion.UseVisualStyleBackColor = true;
+            btnExcursion.Click += btnExcursion_Click;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(625, 639);
+            Controls.Add(btnExcursion);
             Controls.Add(btnTraslado);
             Controls.Add(btnDesglose);
             Controls.Add(btnFinSemana);
@@ -518,5 +530,6 @@
         private Button btnFinSemana;
         private Button btnDesglose;
         private Button btnTraslado;
+        private Button btnExcursion;
     }
 }

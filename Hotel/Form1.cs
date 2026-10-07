@@ -159,5 +159,17 @@ namespace Hotel
             };
             lstResultados.Items.Add($"Traslado: US$ {traslado.Total:N2}");
         }
+
+        private void btnExcursion_Click(object sender, EventArgs e)
+        {
+            var excursion = new Excursion
+            {
+                Personas = 5,
+                PrecioPorPersona = 80m
+
+            };
+            lstResultados.Items.Add($"Excursión: US$ {excursion.Total:N2}");
+
+        }
     }
 }
