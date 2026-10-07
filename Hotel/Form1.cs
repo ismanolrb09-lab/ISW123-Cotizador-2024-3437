@@ -32,7 +32,12 @@ namespace Hotel
             decimal r12 = 10 / 4m;
             lstResultados.Items.Add($"1.2: {r12}");
 
+            // 1.3
+            int x = 5;
+            x = x + 2;
+            x = x * 3;
 
+            lstResultados.Items.Add($"1.3: {x}");
         }
 
 
