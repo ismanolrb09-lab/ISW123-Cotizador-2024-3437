@@ -104,5 +104,18 @@ namespace Hotel
             };
             lstResultados.Items.Add($"Por Persona: US$ {reserva.Total / nudPersonas.Value:N2}");
         }
+
+        private void btnDeposito_Click(object sender, EventArgs e)
+        {
+            var reserva = new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = nudTarifa.Value
+            };
+            decimal deposito = reserva.Total * 0.30m;
+            lstResultados.Items.Add($"Depósito: US$ {deposito:N2}");
+            lstResultados.Items.Add($"Saldo pendiente: US$ {reserva.Total - deposito:N2}");
+        }
     }
 }

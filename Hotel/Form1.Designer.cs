@@ -61,6 +61,7 @@
             label9 = new Label();
             btnPesos = new Button();
             btnPorPersona = new Button();
+            btnDeposito = new Button();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbCotizador.SuspendLayout();
             gbTotales.SuspendLayout();
@@ -289,9 +290,9 @@
             // 
             // btnNivel1
             // 
-            btnNivel1.Location = new Point(325, 282);
+            btnNivel1.Location = new Point(328, 282);
             btnNivel1.Name = "btnNivel1";
-            btnNivel1.Size = new Size(102, 23);
+            btnNivel1.Size = new Size(99, 23);
             btnNivel1.TabIndex = 13;
             btnNivel1.Text = "Nivel 1";
             btnNivel1.UseVisualStyleBackColor = true;
@@ -303,7 +304,7 @@
             lstResultados.ItemHeight = 15;
             lstResultados.Location = new Point(441, 272);
             lstResultados.Name = "lstResultados";
-            lstResultados.Size = new Size(143, 199);
+            lstResultados.Size = new Size(172, 199);
             lstResultados.TabIndex = 14;
             // 
             // nudTasa
@@ -393,11 +394,22 @@
             btnPorPersona.UseVisualStyleBackColor = true;
             btnPorPersona.Click += btnPorPersona_Click;
             // 
+            // btnDeposito
+            // 
+            btnDeposito.Location = new Point(328, 400);
+            btnDeposito.Name = "btnDeposito";
+            btnDeposito.Size = new Size(99, 23);
+            btnDeposito.TabIndex = 24;
+            btnDeposito.Text = "Depósito";
+            btnDeposito.UseVisualStyleBackColor = true;
+            btnDeposito.Click += btnDeposito_Click;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(589, 639);
+            ClientSize = new Size(625, 639);
+            Controls.Add(btnDeposito);
             Controls.Add(btnPorPersona);
             Controls.Add(btnPesos);
             Controls.Add(label9);
@@ -466,5 +478,6 @@
         private Label label9;
         private Button btnPesos;
         private Button btnPorPersona;
+        private Button btnDeposito;
     }
 }
