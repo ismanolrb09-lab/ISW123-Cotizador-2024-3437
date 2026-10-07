@@ -40,16 +40,18 @@
             btnLimpiar = new Button();
             gbCotizador = new GroupBox();
             gbTotales = new GroupBox();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
             lblTotal = new Label();
             lblServicio = new Label();
             lblITBIS = new Label();
             lblDescuento = new Label();
             lblSubtotal = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            btnNivel1 = new Button();
+            lstResultados = new ListBox();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbCotizador.SuspendLayout();
             gbTotales.SuspendLayout();
@@ -129,7 +131,7 @@
             // 
             // btnCalcular
             // 
-            btnCalcular.Location = new Point(285, 366);
+            btnCalcular.Location = new Point(223, 370);
             btnCalcular.Name = "btnCalcular";
             btnCalcular.Size = new Size(75, 23);
             btnCalcular.TabIndex = 9;
@@ -138,7 +140,7 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(285, 432);
+            btnLimpiar.Location = new Point(223, 414);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(75, 23);
             btnLimpiar.TabIndex = 10;
@@ -180,51 +182,6 @@
             gbTotales.TabIndex = 12;
             gbTotales.TabStop = false;
             gbTotales.Text = "Totales";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(11, 25);
-            label2.Name = "label2";
-            label2.Size = new Size(51, 15);
-            label2.TabIndex = 0;
-            label2.Text = "Subtotal";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(12, 47);
-            label3.Name = "label3";
-            label3.Size = new Size(63, 15);
-            label3.TabIndex = 1;
-            label3.Text = "Descuento";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(14, 71);
-            label4.Name = "label4";
-            label4.Size = new Size(33, 15);
-            label4.TabIndex = 2;
-            label4.Text = "ITBIS";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(14, 91);
-            label5.Name = "label5";
-            label5.Size = new Size(48, 15);
-            label5.TabIndex = 3;
-            label5.Text = "Servicio";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(16, 113);
-            label6.Name = "label6";
-            label6.Size = new Size(33, 15);
-            label6.TabIndex = 4;
-            label6.Text = "Total";
             // 
             // lblTotal
             // 
@@ -273,11 +230,77 @@
             lblSubtotal.Text = "0";
             lblSubtotal.Click += label11_Click;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(16, 113);
+            label6.Name = "label6";
+            label6.Size = new Size(33, 15);
+            label6.TabIndex = 4;
+            label6.Text = "Total";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(14, 91);
+            label5.Name = "label5";
+            label5.Size = new Size(48, 15);
+            label5.TabIndex = 3;
+            label5.Text = "Servicio";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(14, 71);
+            label4.Name = "label4";
+            label4.Size = new Size(33, 15);
+            label4.TabIndex = 2;
+            label4.Text = "ITBIS";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(12, 47);
+            label3.Name = "label3";
+            label3.Size = new Size(63, 15);
+            label3.TabIndex = 1;
+            label3.Text = "Descuento";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(11, 25);
+            label2.Name = "label2";
+            label2.Size = new Size(51, 15);
+            label2.TabIndex = 0;
+            label2.Text = "Subtotal";
+            // 
+            // btnNivel1
+            // 
+            btnNivel1.Location = new Point(223, 294);
+            btnNivel1.Name = "btnNivel1";
+            btnNivel1.Size = new Size(102, 23);
+            btnNivel1.TabIndex = 13;
+            btnNivel1.Text = "Nivel 1";
+            btnNivel1.UseVisualStyleBackColor = true;
+            btnNivel1.Click += btnNivel1_Click;
+            // 
+            // lstResultados
+            // 
+            lstResultados.FormattingEnabled = true;
+            lstResultados.ItemHeight = 15;
+            lstResultados.Location = new Point(332, 266);
+            lstResultados.Name = "lstResultados";
+            lstResultados.Size = new Size(120, 94);
+            lstResultados.TabIndex = 14;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(484, 561);
+            Controls.Add(lstResultados);
+            Controls.Add(btnNivel1);
             Controls.Add(gbTotales);
             Controls.Add(gbCotizador);
             Controls.Add(btnLimpiar);
@@ -320,5 +343,7 @@
         private Label label4;
         private Label label3;
         private Label label2;
+        private Button btnNivel1;
+        private ListBox lstResultados;
     }
 }
