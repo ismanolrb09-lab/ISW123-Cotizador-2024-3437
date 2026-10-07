@@ -313,9 +313,9 @@
             // 
             lstResultados.FormattingEnabled = true;
             lstResultados.ItemHeight = 15;
-            lstResultados.Location = new Point(592, 332);
+            lstResultados.Location = new Point(534, 323);
             lstResultados.Name = "lstResultados";
-            lstResultados.Size = new Size(172, 304);
+            lstResultados.Size = new Size(271, 304);
             lstResultados.TabIndex = 14;
             // 
             // nudTasa

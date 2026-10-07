@@ -10,14 +10,14 @@ namespace Hotel
     {
         public static decimal CalcularDeposito(decimal total)
         {
-            decimal porcentaje = 0.03m;
+            decimal porcentaje = 0.30m;
             decimal deposito = total * porcentaje;
             return deposito;
         }
 
         public static decimal APesos(decimal dolares, decimal tasa)
         {
-            decimal pesos = dolares / tasa;
+            decimal pesos = dolares * tasa;
             return pesos;
         }
 
@@ -25,7 +25,7 @@ namespace Hotel
         {
             if (esFinDeSemana)
             {
-                tarifa = tarifa * 0.15m;
+                tarifa = tarifa * 1.15m;
             }
             return tarifa;
         }
@@ -34,7 +34,7 @@ namespace Hotel
         {
             decimal subtotal = personas * precio;
             decimal descuento = 0m;
-            if (personas > 4)
+            if (personas >= 4)
             {
                 descuento = subtotal * 0.10m;
             }
@@ -46,7 +46,7 @@ namespace Hotel
             decimal subtotal = cantidad * precio;
             decimal itbis = subtotal * 0.18m;
             decimal total = subtotal + itbis;
-            return subtotal;
+            return total;
         }
     }
 }
