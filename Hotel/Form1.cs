@@ -53,6 +53,20 @@ namespace Hotel
                 d = 50m;
             }
             lstResultados.Items.Add($"1.5: {d}");
+
+            // 1.6
+            int n16 = 7;
+            bool larga = n16 >= 7;
+
+            lstResultados.Items.Add($"1.6: {larga}");
+
+
+
+
+
+
+
+
         }
 
 
