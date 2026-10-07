@@ -28,8 +28,9 @@ namespace Hotel
             lstResultados.Items.Clear();
             lstResultados.Items.Add($"1.1: {r11}");
 
-
-
+            // 1.2
+            decimal r12 = 10 / 4m;
+            lstResultados.Items.Add($"1.2: {r12}");
 
 
         }
