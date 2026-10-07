@@ -70,7 +70,11 @@ namespace Hotel
             decimal total = n18 * t18 * 1.28m;
             lstResultados.Items.Add($"1.8: {total}");
 
+            // 1.9
+            decimal t19 = 120m;
+            t19 = t19 + t19 * 0.25m;
 
+            lstResultados.Items.Add($"1.9: {t19}");
         }
 
 
