@@ -207,5 +207,23 @@ namespace Hotel
             lstResultados.Items.Add($"Excursión 4 × 50: {SistemaViejo.TotalExcursion(4, 50m):N2} (debe dar 180.00)");
             lstResultados.Items.Add($"Minibar 3 × 4: {SistemaViejo.TotalMinibar(3, 4m):N2} (debe dar 14.16)");
         }
+
+        private void btnFactura_Click(object sender, EventArgs e)
+        {
+            lstResultados.Items.Clear();
+            // 1. Reserva con recargo de fin de semana si la casilla está marcada
+            decimal tarifa = nudTarifa.Value;
+            if (chkFinSemana.Checked)
+            {
+                tarifa = tarifa * 1.15m;
+            }
+
+            var reserva = new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = tarifa
+            };
+        }
     }
 }

@@ -73,6 +73,7 @@
             btnCuentaTotal = new Button();
             label13 = new Label();
             btnViejo = new Button();
+            btnFactura = new Button();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbCotizador.SuspendLayout();
             gbTotales.SuspendLayout();
@@ -525,11 +526,22 @@
             btnViejo.UseVisualStyleBackColor = true;
             btnViejo.Click += btnViejo_Click;
             // 
+            // btnFactura
+            // 
+            btnFactura.Location = new Point(397, 366);
+            btnFactura.Name = "btnFactura";
+            btnFactura.Size = new Size(75, 23);
+            btnFactura.TabIndex = 36;
+            btnFactura.Text = "Factura";
+            btnFactura.UseVisualStyleBackColor = true;
+            btnFactura.Click += btnFactura_Click;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(886, 639);
+            Controls.Add(btnFactura);
             Controls.Add(btnViejo);
             Controls.Add(label13);
             Controls.Add(btnCuentaTotal);
@@ -622,5 +634,6 @@
         private Button btnCuentaTotal;
         private Label label13;
         private Button btnViejo;
+        private Button btnFactura;
     }
 }
