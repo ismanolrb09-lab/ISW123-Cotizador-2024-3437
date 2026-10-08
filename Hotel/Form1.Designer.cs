@@ -74,6 +74,7 @@
             label13 = new Label();
             btnViejo = new Button();
             btnFactura = new Button();
+            label14 = new Label();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbCotizador.SuspendLayout();
             gbTotales.SuspendLayout();
@@ -518,7 +519,7 @@
             // 
             // btnViejo
             // 
-            btnViejo.Location = new Point(602, 261);
+            btnViejo.Location = new Point(593, 261);
             btnViejo.Name = "btnViejo";
             btnViejo.Size = new Size(139, 23);
             btnViejo.TabIndex = 35;
@@ -528,7 +529,7 @@
             // 
             // btnFactura
             // 
-            btnFactura.Location = new Point(397, 366);
+            btnFactura.Location = new Point(394, 374);
             btnFactura.Name = "btnFactura";
             btnFactura.Size = new Size(75, 23);
             btnFactura.TabIndex = 36;
@@ -536,11 +537,22 @@
             btnFactura.UseVisualStyleBackColor = true;
             btnFactura.Click += btnFactura_Click;
             // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.Location = new Point(348, 352);
+            label14.Name = "label14";
+            label14.Size = new Size(167, 15);
+            label14.TabIndex = 37;
+            label14.Text = "RETO FINAL FACTURA TOTAL";
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(886, 639);
+            Controls.Add(label14);
             Controls.Add(btnFactura);
             Controls.Add(btnViejo);
             Controls.Add(label13);
@@ -635,5 +647,6 @@
         private Label label13;
         private Button btnViejo;
         private Button btnFactura;
+        private Label label14;
     }
 }

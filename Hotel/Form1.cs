@@ -224,6 +224,27 @@ namespace Hotel
                 Noches = (int)nudNoches.Value,
                 TarifaPorNoche = tarifa
             };
+
+            // 2. Servicios con los datos del nivel 3 igual
+            var traslado = new TrasladoAeropuerto { Pasajeros = 3, Nocturno = true };
+            var excursion = new Excursion { Personas = 5, PrecioPorPersona = 80m };
+            var minibar = new ConsumoMinibar { Cantidad = 9, PrecioUnitario = 3.50m };
+
+            // 3. Totales
+            decimal totalGeneral = reserva.Total + traslado.Total + excursion.Total + minibar.Total;
+            decimal totalPesos = totalGeneral * nudTasa.Value;
+
+            // 4. Depósito con tu método corregido
+            decimal deposito = SistemaViejo.CalcularDeposito(totalGeneral);
+
+            lstResultados.Items.Add($"Huésped: {reserva.Huesped}");
+            lstResultados.Items.Add($"Estadía: US$ {reserva.Total:N2}");
+            lstResultados.Items.Add($"Traslado: US$ {traslado.Total:N2}");
+            lstResultados.Items.Add($"Excursión: US$ {excursion.Total:N2}");
+            lstResultados.Items.Add($"Minibar: US$ {minibar.Total:N2}");
+            lstResultados.Items.Add($"TOTAL US$: {totalGeneral:N2}");
+            lstResultados.Items.Add($"TOTAL RD$: {totalPesos:N2}");
+            lstResultados.Items.Add($"Depósito 30%: US$ {deposito:N2}");
         }
     }
 }
