@@ -75,6 +75,10 @@
             btnViejo = new Button();
             btnFactura = new Button();
             label14 = new Label();
+            btnImperativo = new Button();
+            label15 = new Label();
+            button2 = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbCotizador.SuspendLayout();
             gbTotales.SuspendLayout();
@@ -547,11 +551,53 @@
             label14.TabIndex = 37;
             label14.Text = "RETO FINAL FACTURA TOTAL";
             // 
+            // btnImperativo
+            // 
+            btnImperativo.Location = new Point(385, 478);
+            btnImperativo.Name = "btnImperativo";
+            btnImperativo.Size = new Size(84, 23);
+            btnImperativo.TabIndex = 38;
+            btnImperativo.Text = "Imperativo";
+            btnImperativo.UseVisualStyleBackColor = true;
+            btnImperativo.Click += btnImperativo_Click;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.Location = new Point(324, 444);
+            label15.Name = "label15";
+            label15.Size = new Size(204, 15);
+            label15.TabIndex = 39;
+            label15.Text = "BOTONES PARA LOS  PARADIGMAS";
+            // 
+            // button2
+            // 
+            button2.Location = new Point(385, 521);
+            button2.Name = "button2";
+            button2.Size = new Size(84, 23);
+            button2.TabIndex = 40;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(385, 566);
+            button3.Name = "button3";
+            button3.Size = new Size(84, 23);
+            button3.TabIndex = 41;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(886, 639);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(label15);
+            Controls.Add(btnImperativo);
             Controls.Add(label14);
             Controls.Add(btnFactura);
             Controls.Add(btnViejo);
@@ -648,5 +694,9 @@
         private Button btnViejo;
         private Button btnFactura;
         private Label label14;
+        private Button btnImperativo;
+        private Label label15;
+        private Button button2;
+        private Button button3;
     }
 }

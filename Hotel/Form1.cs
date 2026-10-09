@@ -246,5 +246,18 @@ namespace Hotel
             lstResultados.Items.Add($"TOTAL RD$: {totalPesos:N2}");
             lstResultados.Items.Add($"Depósito 30%: US$ {deposito:N2}");
         }
+
+        private void btnImperativo_Click(object sender, EventArgs e)
+        {
+            int noches = (int)nudNoches.Value;
+            decimal tarifa = nudTarifa.Value;
+
+            decimal subtotal = noches * tarifa;
+            decimal descuento = 0m;
+            if (noches >= 7)
+            {
+                descuento = subtotal * 0.10m;
+            }
+        }
     }
 }
