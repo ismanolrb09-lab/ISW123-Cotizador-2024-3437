@@ -258,6 +258,24 @@ namespace Hotel
             {
                 descuento = subtotal * 0.10m;
             }
+            decimal baseImponible = subtotal - descuento;
+            decimal itbis = baseImponible * 0.18m;
+            decimal servicio = baseImponible * 0.10m;
+            decimal total = baseImponible + itbis + servicio;
+
+            lstResultados.Items.Add($"Imperativo: US$ {total:N2}");
+        }
+
+        private void btnObjetos_Click(object sender, EventArgs e)
+        {
+            var reserva = new Reserva
+            {
+                Huesped = txtHuesped.Text,
+                Noches = (int)nudNoches.Value,
+                TarifaPorNoche = nudTarifa.Value
+            };
+
+            lstResultados.Items.Add($"Objetos: US$ {reserva.Total:N2}");
         }
     }
 }

@@ -77,7 +77,7 @@
             label14 = new Label();
             btnImperativo = new Button();
             label15 = new Label();
-            button2 = new Button();
+            btnObjetos = new Button();
             button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbCotizador.SuspendLayout();
@@ -143,7 +143,7 @@
             // 
             // txtTarifa
             // 
-            txtTarifa.Location = new Point(159, 106);
+            txtTarifa.Location = new Point(71, 571);
             txtTarifa.Name = "txtTarifa";
             txtTarifa.Size = new Size(100, 23);
             txtTarifa.TabIndex = 7;
@@ -152,7 +152,7 @@
             // ckTemporada
             // 
             ckTemporada.AutoSize = true;
-            ckTemporada.Location = new Point(31, 161);
+            ckTemporada.Location = new Point(59, 223);
             ckTemporada.Name = "ckTemporada";
             ckTemporada.Size = new Size(149, 19);
             ckTemporada.TabIndex = 8;
@@ -161,7 +161,7 @@
             // 
             // btnCalcular
             // 
-            btnCalcular.Location = new Point(100, 399);
+            btnCalcular.Location = new Point(100, 436);
             btnCalcular.Name = "btnCalcular";
             btnCalcular.Size = new Size(75, 23);
             btnCalcular.TabIndex = 9;
@@ -170,7 +170,7 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(12, 399);
+            btnLimpiar.Location = new Point(12, 436);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(75, 23);
             btnLimpiar.TabIndex = 10;
@@ -184,12 +184,17 @@
             gbCotizador.Controls.Add(lblHuesped);
             gbCotizador.Controls.Add(ckTemporada);
             gbCotizador.Controls.Add(txtHuesped);
-            gbCotizador.Controls.Add(txtTarifa);
             gbCotizador.Controls.Add(lblNoches);
             gbCotizador.Controls.Add(lblTarifa);
+            gbCotizador.Controls.Add(nudTarifa);
+            gbCotizador.Controls.Add(nudTasa);
+            gbCotizador.Controls.Add(label7);
+            gbCotizador.Controls.Add(label8);
+            gbCotizador.Controls.Add(nudPersonas);
+            gbCotizador.Controls.Add(chkFinSemana);
             gbCotizador.Location = new Point(12, 36);
             gbCotizador.Name = "gbCotizador";
-            gbCotizador.Size = new Size(415, 218);
+            gbCotizador.Size = new Size(415, 248);
             gbCotizador.TabIndex = 11;
             gbCotizador.TabStop = false;
             gbCotizador.Text = "Cotizador";
@@ -206,7 +211,7 @@
             gbTotales.Controls.Add(label4);
             gbTotales.Controls.Add(label3);
             gbTotales.Controls.Add(label2);
-            gbTotales.Location = new Point(12, 261);
+            gbTotales.Location = new Point(12, 288);
             gbTotales.Name = "gbTotales";
             gbTotales.Size = new Size(192, 132);
             gbTotales.TabIndex = 12;
@@ -327,27 +332,27 @@
             // nudTasa
             // 
             nudTasa.DecimalPlaces = 2;
-            nudTasa.Location = new Point(100, 480);
+            nudTasa.Location = new Point(159, 143);
             nudTasa.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             nudTasa.Name = "nudTasa";
-            nudTasa.Size = new Size(120, 23);
+            nudTasa.Size = new Size(137, 23);
             nudTasa.TabIndex = 15;
             nudTasa.Value = new decimal(new int[] { 61, 0, 0, 0 });
             // 
             // nudPersonas
             // 
-            nudPersonas.Location = new Point(100, 523);
+            nudPersonas.Location = new Point(157, 185);
             nudPersonas.Maximum = new decimal(new int[] { 20, 0, 0, 0 });
             nudPersonas.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nudPersonas.Name = "nudPersonas";
-            nudPersonas.Size = new Size(120, 23);
+            nudPersonas.Size = new Size(139, 23);
             nudPersonas.TabIndex = 16;
             nudPersonas.Value = new decimal(new int[] { 3, 0, 0, 0 });
             // 
             // chkFinSemana
             // 
             chkFinSemana.AutoSize = true;
-            chkFinSemana.Location = new Point(93, 608);
+            chkFinSemana.Location = new Point(225, 223);
             chkFinSemana.Name = "chkFinSemana";
             chkFinSemana.Size = new Size(143, 19);
             chkFinSemana.TabIndex = 17;
@@ -357,7 +362,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(12, 482);
+            label7.Location = new Point(22, 151);
             label7.Name = "label7";
             label7.Size = new Size(82, 15);
             label7.TabIndex = 18;
@@ -366,7 +371,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(17, 531);
+            label8.Location = new Point(33, 193);
             label8.Name = "label8";
             label8.Size = new Size(57, 15);
             label8.TabIndex = 19;
@@ -375,10 +380,10 @@
             // nudTarifa
             // 
             nudTarifa.DecimalPlaces = 2;
-            nudTarifa.Location = new Point(100, 566);
+            nudTarifa.Location = new Point(159, 101);
             nudTarifa.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             nudTarifa.Name = "nudTarifa";
-            nudTarifa.Size = new Size(120, 23);
+            nudTarifa.Size = new Size(137, 23);
             nudTarifa.TabIndex = 20;
             nudTarifa.Value = new decimal(new int[] { 130, 0, 0, 0 });
             // 
@@ -571,14 +576,15 @@
             label15.TabIndex = 39;
             label15.Text = "BOTONES PARA LOS  PARADIGMAS";
             // 
-            // button2
+            // btnObjetos
             // 
-            button2.Location = new Point(385, 521);
-            button2.Name = "button2";
-            button2.Size = new Size(84, 23);
-            button2.TabIndex = 40;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnObjetos.Location = new Point(385, 521);
+            btnObjetos.Name = "btnObjetos";
+            btnObjetos.Size = new Size(84, 23);
+            btnObjetos.TabIndex = 40;
+            btnObjetos.Text = "POO";
+            btnObjetos.UseVisualStyleBackColor = true;
+            btnObjetos.Click += btnObjetos_Click;
             // 
             // button3
             // 
@@ -595,10 +601,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(886, 639);
             Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btnObjetos);
             Controls.Add(label15);
             Controls.Add(btnImperativo);
             Controls.Add(label14);
+            Controls.Add(txtTarifa);
             Controls.Add(btnFactura);
             Controls.Add(btnViejo);
             Controls.Add(label13);
@@ -615,12 +622,6 @@
             Controls.Add(btnPorPersona);
             Controls.Add(btnPesos);
             Controls.Add(label9);
-            Controls.Add(nudTarifa);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(chkFinSemana);
-            Controls.Add(nudPersonas);
-            Controls.Add(nudTasa);
             Controls.Add(lstResultados);
             Controls.Add(btnNivel1);
             Controls.Add(gbTotales);
@@ -696,7 +697,7 @@
         private Label label14;
         private Button btnImperativo;
         private Label label15;
-        private Button button2;
+        private Button btnObjetos;
         private Button button3;
     }
 }
