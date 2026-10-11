@@ -277,5 +277,32 @@ namespace Hotel
 
             lstResultados.Items.Add($"Objetos: US$ {reserva.Total:N2}");
         }
+
+        private static decimal CalcularSubtotal(int noches, decimal tarifa)
+        {
+            return noches * tarifa;
+        }
+
+        private static decimal CalcularBase(int noches, decimal subtotal)
+        {
+            return noches >= 7 ? subtotal - subtotal * 0.10m : subtotal;
+        }
+
+        private static decimal CalcularTotal(decimal baseImponible)
+        {
+            return baseImponible + baseImponible * 0.18m + baseImponible * 0.10m;
+        }
+
+        private void btnFuncional_Click(object sender, EventArgs e)
+        {
+            int noches = (int)nudNoches.Value;
+            decimal tarifa = nudTarifa.Value;
+
+            decimal total = CalcularTotal(CalcularBase(noches, CalcularSubtotal(noches, tarifa)));
+
+            lstResultados.Items.Add($"Funcional: US$ {total:N2}");
+        }
+
     }
+
 }

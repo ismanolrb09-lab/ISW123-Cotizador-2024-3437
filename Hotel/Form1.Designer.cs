@@ -39,6 +39,12 @@
             btnCalcular = new Button();
             btnLimpiar = new Button();
             gbCotizador = new GroupBox();
+            nudTarifa = new NumericUpDown();
+            nudTasa = new NumericUpDown();
+            label7 = new Label();
+            label8 = new Label();
+            nudPersonas = new NumericUpDown();
+            chkFinSemana = new CheckBox();
             gbTotales = new GroupBox();
             lblTotal = new Label();
             lblServicio = new Label();
@@ -52,12 +58,6 @@
             label2 = new Label();
             btnNivel1 = new Button();
             lstResultados = new ListBox();
-            nudTasa = new NumericUpDown();
-            nudPersonas = new NumericUpDown();
-            chkFinSemana = new CheckBox();
-            label7 = new Label();
-            label8 = new Label();
-            nudTarifa = new NumericUpDown();
             label9 = new Label();
             btnPesos = new Button();
             btnPorPersona = new Button();
@@ -78,13 +78,13 @@
             btnImperativo = new Button();
             label15 = new Label();
             btnObjetos = new Button();
-            button3 = new Button();
+            btnFuncional = new Button();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbCotizador.SuspendLayout();
-            gbTotales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudTarifa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudTasa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudPersonas).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nudTarifa).BeginInit();
+            gbTotales.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -198,6 +198,64 @@
             gbCotizador.TabIndex = 11;
             gbCotizador.TabStop = false;
             gbCotizador.Text = "Cotizador";
+            // 
+            // nudTarifa
+            // 
+            nudTarifa.DecimalPlaces = 2;
+            nudTarifa.Location = new Point(159, 101);
+            nudTarifa.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            nudTarifa.Name = "nudTarifa";
+            nudTarifa.Size = new Size(137, 23);
+            nudTarifa.TabIndex = 20;
+            nudTarifa.Value = new decimal(new int[] { 130, 0, 0, 0 });
+            // 
+            // nudTasa
+            // 
+            nudTasa.DecimalPlaces = 2;
+            nudTasa.Location = new Point(159, 143);
+            nudTasa.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            nudTasa.Name = "nudTasa";
+            nudTasa.Size = new Size(137, 23);
+            nudTasa.TabIndex = 15;
+            nudTasa.Value = new decimal(new int[] { 61, 0, 0, 0 });
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(22, 151);
+            label7.Name = "label7";
+            label7.Size = new Size(82, 15);
+            label7.TabIndex = 18;
+            label7.Text = "Tasa del dólar:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(33, 193);
+            label8.Name = "label8";
+            label8.Size = new Size(57, 15);
+            label8.TabIndex = 19;
+            label8.Text = "Personas:";
+            // 
+            // nudPersonas
+            // 
+            nudPersonas.Location = new Point(157, 185);
+            nudPersonas.Maximum = new decimal(new int[] { 20, 0, 0, 0 });
+            nudPersonas.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            nudPersonas.Name = "nudPersonas";
+            nudPersonas.Size = new Size(139, 23);
+            nudPersonas.TabIndex = 16;
+            nudPersonas.Value = new decimal(new int[] { 3, 0, 0, 0 });
+            // 
+            // chkFinSemana
+            // 
+            chkFinSemana.AutoSize = true;
+            chkFinSemana.Location = new Point(225, 223);
+            chkFinSemana.Name = "chkFinSemana";
+            chkFinSemana.Size = new Size(143, 19);
+            chkFinSemana.TabIndex = 17;
+            chkFinSemana.Text = "Fin de semana (+15%)";
+            chkFinSemana.UseVisualStyleBackColor = true;
             // 
             // gbTotales
             // 
@@ -328,64 +386,6 @@
             lstResultados.Name = "lstResultados";
             lstResultados.Size = new Size(271, 304);
             lstResultados.TabIndex = 14;
-            // 
-            // nudTasa
-            // 
-            nudTasa.DecimalPlaces = 2;
-            nudTasa.Location = new Point(159, 143);
-            nudTasa.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            nudTasa.Name = "nudTasa";
-            nudTasa.Size = new Size(137, 23);
-            nudTasa.TabIndex = 15;
-            nudTasa.Value = new decimal(new int[] { 61, 0, 0, 0 });
-            // 
-            // nudPersonas
-            // 
-            nudPersonas.Location = new Point(157, 185);
-            nudPersonas.Maximum = new decimal(new int[] { 20, 0, 0, 0 });
-            nudPersonas.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            nudPersonas.Name = "nudPersonas";
-            nudPersonas.Size = new Size(139, 23);
-            nudPersonas.TabIndex = 16;
-            nudPersonas.Value = new decimal(new int[] { 3, 0, 0, 0 });
-            // 
-            // chkFinSemana
-            // 
-            chkFinSemana.AutoSize = true;
-            chkFinSemana.Location = new Point(225, 223);
-            chkFinSemana.Name = "chkFinSemana";
-            chkFinSemana.Size = new Size(143, 19);
-            chkFinSemana.TabIndex = 17;
-            chkFinSemana.Text = "Fin de semana (+15%)";
-            chkFinSemana.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(22, 151);
-            label7.Name = "label7";
-            label7.Size = new Size(82, 15);
-            label7.TabIndex = 18;
-            label7.Text = "Tasa del dólar:";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(33, 193);
-            label8.Name = "label8";
-            label8.Size = new Size(57, 15);
-            label8.TabIndex = 19;
-            label8.Text = "Personas:";
-            // 
-            // nudTarifa
-            // 
-            nudTarifa.DecimalPlaces = 2;
-            nudTarifa.Location = new Point(159, 101);
-            nudTarifa.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            nudTarifa.Name = "nudTarifa";
-            nudTarifa.Size = new Size(137, 23);
-            nudTarifa.TabIndex = 20;
-            nudTarifa.Value = new decimal(new int[] { 130, 0, 0, 0 });
             // 
             // label9
             // 
@@ -586,21 +586,22 @@
             btnObjetos.UseVisualStyleBackColor = true;
             btnObjetos.Click += btnObjetos_Click;
             // 
-            // button3
+            // btnFuncional
             // 
-            button3.Location = new Point(385, 566);
-            button3.Name = "button3";
-            button3.Size = new Size(84, 23);
-            button3.TabIndex = 41;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btnFuncional.Location = new Point(385, 566);
+            btnFuncional.Name = "btnFuncional";
+            btnFuncional.Size = new Size(84, 23);
+            btnFuncional.TabIndex = 41;
+            btnFuncional.Text = "Funcional";
+            btnFuncional.UseVisualStyleBackColor = true;
+            btnFuncional.Click += btnFuncional_Click;
             // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(886, 639);
-            Controls.Add(button3);
+            Controls.Add(btnFuncional);
             Controls.Add(btnObjetos);
             Controls.Add(label15);
             Controls.Add(btnImperativo);
@@ -633,15 +634,15 @@
             MinimizeBox = false;
             Name = "frmInicio";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Cotizador Villa Coral - Ismanol 2024-3437";
+            Text = "Cotizador Villa Coral - Ismanol Derny Rodriguez Batista - 2024-3437";
             ((System.ComponentModel.ISupportInitialize)nudNoches).EndInit();
             gbCotizador.ResumeLayout(false);
             gbCotizador.PerformLayout();
-            gbTotales.ResumeLayout(false);
-            gbTotales.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudTarifa).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudTasa).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudPersonas).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nudTarifa).EndInit();
+            gbTotales.ResumeLayout(false);
+            gbTotales.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -698,6 +699,6 @@
         private Button btnImperativo;
         private Label label15;
         private Button btnObjetos;
-        private Button button3;
+        private Button btnFuncional;
     }
 }
